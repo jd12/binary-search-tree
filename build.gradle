@@ -8,14 +8,11 @@
  */
 
 // Apply the java plugin to add support for Java
-apply plugin: 'java'
+apply plugin: 'java-library'
 apply plugin: 'eclipse'
 apply plugin: 'checkstyle'
-apply plugin: 'findbugs'
-apply plugin: 'pmd'
 
 checkstyleTest.enabled = false
-pmdTest.enabled = false
 
 sourceSets {
      main {
@@ -36,37 +33,18 @@ repositories {
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
-    // The production code uses the SLF4J logging API at compile time
-    compile 'org.slf4j:slf4j-api:1.7.21'
+  // This dependency is exported to consumers, that is to say found on their compile classpath.
+  api 'org.apache.commons:commons-math3:3.6.1'
 
-    // Declare the dependency for your favourite test framework you want to use in your tests.
-    // TestNG is also supported by the Gradle Test task. Just change the
-    // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
-    // 'test.useTestNG()' to your build script.
-    // testCompile 'junit:junit:4.12'
-    testCompile group: 'junit', name: 'junit', version: '4.+'
-    checkstyle group: 'com.thomasjensen.checkstyle.addons', name: 'checkstyle-addons', version: '4.1.2'
+  // This dependency is used internally, and not exposed to consumers on their own compile classpath.
+  implementation 'com.google.guava:guava:23.0'
+
+  // Use JUnit test framework
+  testImplementation 'junit:junit:4.12'
 }
 
 checkstyle {
     ignoreFailures = true
     configFile = file('config/checkstyle/checkstyle.xml')
-    toolVersion = "8+"   // set Checkstyle version here
-}
-
-findbugs {
-   ignoreFailures = true
-}
-
-pmd {
-  ignoreFailures = true
-  ruleSetFiles = files("config/pmd/ruleset.xml")
-  reportsDir = file("$project.buildDir/reports/pmd")
-}
-
-tasks.withType(FindBugs) {
-    reports {
-        xml.enabled false
-        html.enabled true
-    }
+    toolVersion = "8.1"   // set Checkstyle version here
 }
