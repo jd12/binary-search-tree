@@ -6,7 +6,7 @@ Be sure to add the base repository as I will update the README at times
 
 `git remote add projectSpecs https://github.com/jd12/binary-search-tree.git`
 
-To update your README <br>
+To update your project <br>
 `git pull projectSpecs master`
 
 
@@ -16,13 +16,10 @@ For this assignment you will be implementing the Binary Search Tree ADT and a nu
 ### Table of Contents
 **[Files to complete](#files-to-complete)**<br>
 **[Support Code API](#support-code-api)**<br>
-**[Part One: Importing Project into Eclipse](#part-one-importing-project-into-eclipse)**<br>
-**[Part Two: Implementing LinkedStack](#part-two-implementing-linkedstack)**<br>
-**[Part Three: Implement Arithmetic Operators](#part-three-implement-arithmetic-operators)**<br>
-**[Part Four: Implement a Postfix Arithmetic Evaluator](#part-four-implement-a-postfix-arithmetic-evaluator)**<br>
-**[Part Five: Commit Project and Submit Pull Request](#part-five-commit-project-and-submit-pull-request)**<br>
-**[Bonus: Infix Expression Evaluator](#bonus-infix-expression-evaluator)**<br>
-**[Additional Notes: Help for the project](#additional-notes)**<br>
+**[Part One: Clone, Branch, and Import Project](#part-one-clone-branch-and-import-project)**<br>
+**[Part Two: Implement the BinaryTreeNode Interface](#part-two-implement-the-binarytreenode-interface)**<br>
+**[Part Three: Implement the BinaryTreeUtility Interface](#part-three-implement-the-binarytreeutility-interface)**<br>
+**[Part Four: Implement the BinarySearchTree Interface](#part-four-implement-the-binarysearchtree-interface)**<br>
 
 ## Book
 This assignment is based off Chapter 9 and Chapter 10 in Java Software Structures
@@ -31,35 +28,47 @@ This assignment is based off Chapter 9 and Chapter 10 in Java Software Structure
 You are expected to write an implementation for each of the interfaces listed in the classes presented in the config package provided. As with the last assignment, you must specify which implementation you would like us to grade in this file.
 
 ### Test files
-In the test folder, you are provided with several JUnit test cases that will help you keep on track while completing this assignment. I recommend you run the tests often and use them as a checklist of things to do next. You are not allowed to modify these files. If you have errors in these files, it means the structure of the files found in the src folder have been altered in a way that will cause your submission to lose points.
+In the test folder, you are provided with several JUnit test cases that will help you keep on track while completing this assignment. I recommend you run the tests often and use them as a checklist of things to do next. You are not allowed to modify my test cases, but you should add your own to fill out the test suite. If you have errors in these files, it means the structure of the files found in the src folder have been altered in a way that will cause your submission to lose points.
 
 ### Support Code API
 The Support Code’s comments have been generated into a nicely formatted API that can be found here:
 
-http://people.cs.umass.edu/~jddevaughn/deerfield/projects/bst/doc/
+https://jd12.github.io/binary-search-tree/
 
 It is highly recommended that you spend some time simply reading over the comments in each of the interfaces and classes provided.
 
+## Part One: Clone, Branch, and Import Project 
+Begin by cloning the provided project, creating your dev branch, and importing it into your workspace. 
 
+```
+git clone <url for github repository>
+```
 
-## Part One: Importing Project into Eclipse
-Begin by cloning the provided project and importing it into your workspace.
+After cloning this repository you want to run these commands
 
-`git clone <url for github repository>`
+```
+cp pre-commit .git/hooks
+chmod -x .git/hooks/pre-commit
+```
 
-You should then go to Eclipse. File --> Import. Double-click on General and then Existing Projects into Workspace. Click Browse next to Select Root Directory and find your folder and click Open. The project should pop up in the text box Projects. Click finish and you should be good to go!
+Then you want to create a development branch
 
-You should now have a project called postfix-student it is very important that you do not rename this project as it is used during the grading process. If the project is renamed, your assignment may not be graded.
+```
+git branch development
+git checkout development
+```
+
+You should then import it to your IDE of choice. 
 
 By default, your project should have no errors and contain the following root items:
 
 **src** - The source folder where all code you are submitting must go. You can change anything you want in this folder, you can add new files, etc...<br>
 **test** - The test folder where all of the public unit tests are available<br>
-**support** - This folder contains support code that I encourage you to use (and must be used to pass certain tests). You are not allowed to change anything in this folder.<br>
+**support** - This folder contains support code that I encourage you to use (and must be used to pass certain tests). I would be very careful changing files in this folder.<br>
 **JUnit 4** - A library that is used to run the test programs<br>
 **JRE System Library** - This is what allows java to run<br>
 
-If you are missing any of the above or errors are present in the project, seek help immediately so you can get started on the project right away.
+If you are missing any of the above or errors are present in the project, seek help immediately so you can get started on the project right away. 
 
 ## Part Two: Implement the BinaryTreeNode Interface
 A BinaryTreeNode represenst a node in a binary tree. It stores data of generic type T and may have a right and a left child, each a reference to another BinaryTreeNode.  The BinaryTreeNode interface includes standard getters and setters for a BinaryTreeNode’s right and left children as well as its data.
@@ -91,7 +100,7 @@ Next you will implement methods underlying the BST structure.
 
 **Iterator** -- This function returns an iterator that supports in-order access to the nodes of the BST.  Recall that an in-order traversal of a BST results in a sorted order due to the BST property.  
 
-**For Extra Credit:** The method returning an iterator should complete in O(1) time, so it should not compute the entire sequential order ahead of time
+**Bonus:** The method returning an iterator should complete in O(1) time, so it should not compute the entire sequential order ahead of time
 
 If you choose to implement an iterator method that returns in O(1) time, you will receive extra credit. This means you should not compute the traversal in its entirety when creating and returning the iterator.  Instead, the iterator should be initialized and returned as a result of the function call, with the next element in the traversal computed with each call to `next()`.
 
