@@ -9,7 +9,7 @@ import structures.BinaryTreeUtility;
  * This class acts as a configuration file which tells the testing framework
  * which implementation you want us to use when we grade your assignment.
  * 
- * @author jddevaug
+ * @author jcollard jddevaug
  * 
  */
 public class Configuration {

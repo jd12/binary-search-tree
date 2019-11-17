@@ -1,15 +1,5 @@
 # Binary Search Tree Assignment
 
-## Add Base Repository as remote repository
-
-Be sure to add the base repository as I will update the README at times
-
-`git remote add projectSpecs https://github.com/jd12/binary-search-tree.git`
-
-To update your project <br>
-`git pull projectSpecs master`
-
-
 ## Overview
 For this assignment you will be implementing the Binary Search Tree ADT and a number of associated functions. It would be very helpful to read chapters 9 and 10 in the Java Software Structures book.
 
@@ -28,7 +18,7 @@ This assignment is based off Chapter 9 and Chapter 10 in Java Software Structure
 You are expected to write an implementation for each of the interfaces listed in the classes presented in the config package provided. As with the last assignment, you must specify which implementation you would like us to grade in this file.
 
 ### Test files
-In the test folder, you are provided with several JUnit test cases that will help you keep on track while completing this assignment. I recommend you run the tests often and use them as a checklist of things to do next. You are not allowed to modify my test cases, but you should add your own to fill out the test suite. If you have errors in these files, it means the structure of the files found in the src folder have been altered in a way that will cause your submission to lose points.
+In the test folder, you are provided with several JUnit test cases that will help you keep on track while completing this assignment. I recommend you run the tests often and use them as a checklist of things to do next. You are not allowed to modify my test cases, but you will need to add your own to fill out the test suite. If you have errors in these files, it means the structure of the files found in the src folder have been altered in a way that will cause your submission to lose points.
 
 ### Support Code API
 The Support Code’s comments have been generated into a nicely formatted API that can be found here:
@@ -48,7 +38,7 @@ After cloning this repository you want to run these commands
 
 ```
 cp pre-commit .git/hooks
-chmod -x .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
 ```
 
 Then you want to create a development branch
@@ -71,7 +61,7 @@ By default, your project should have no errors and contain the following root it
 If you are missing any of the above or errors are present in the project, seek help immediately so you can get started on the project right away. 
 
 ## Part Two: Implement the BinaryTreeNode Interface
-A BinaryTreeNode represenst a node in a binary tree. It stores data of generic type T and may have a right and a left child, each a reference to another BinaryTreeNode.  The BinaryTreeNode interface includes standard getters and setters for a BinaryTreeNode’s right and left children as well as its data.
+A BinaryTreeNode represents a node in a binary tree. It stores data of generic type T and may have a right and a left child, each a reference to another BinaryTreeNode.  The BinaryTreeNode interface includes standard getters and setters for a BinaryTreeNode’s right and left children as well as its data.
 
 ## Part Three: Implement the BinaryTreeUtility Interface
 The BinaryTreeUtility interface provides basic functions for working with a binary tree.

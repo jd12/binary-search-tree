@@ -4,7 +4,7 @@ package structures;
  * A {@link BinaryTreeNode} represents a node in a binary tree. It is guaranteed
  * to store some data (cannot hold null) and may have a left child and a right child.
  *  
- * @author jddevaug
+ * @author jcollard jddevaug
  * @see http://en.wikipedia.org/wiki/Binary_tree
  * @param <T> they type of data stored in this {@link BinaryTreeNode}
  */

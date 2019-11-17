@@ -9,7 +9,7 @@ import java.util.Iterator;
  * </p>
  * 
  * 
- * @author jddevaug
+ * @author jcollard jddevaug
  * @see http://en.wikipedia.org/wiki/Binary_search_tree
  * @see http://en.wikipedia.org/wiki/Tree_traversal#In-order_.28symmetric.29
  * 

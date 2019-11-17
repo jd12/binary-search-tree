@@ -6,7 +6,7 @@ import java.util.Iterator;
  * A {@link BinaryTreeUtility} provides utility methods for
  * {@link BinaryTreeNode}s
  * 
- * @author jddevaug
+ * @author jcollard jddevaug
  * 
  */
 public interface BinaryTreeUtility {
