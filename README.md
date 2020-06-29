@@ -10,6 +10,7 @@ For this assignment you will be implementing the Binary Search Tree ADT and a nu
 **[Part Two: Implement the BinaryTreeNode Interface](#part-two-implement-the-binarytreenode-interface)**<br>
 **[Part Three: Implement the BinaryTreeUtility Interface](#part-three-implement-the-binarytreeutility-interface)**<br>
 **[Part Four: Implement the BinarySearchTree Interface](#part-four-implement-the-binarysearchtree-interface)**<br>
+**[Part Five: Commit Project and Submit Pull Request](#part-five-commit-project-and-submit-pull-request)**
 
 ## Book
 This assignment is based off Chapter 9 and Chapter 10 in Java Software Structures
@@ -96,4 +97,4 @@ If you choose to implement an iterator method that returns in O(1) time, you wil
 
 
 ## Part Five: Commit Project and Submit Pull Request
-When you have finished your solution and are ready to submit, make your final commit and push eveything up to Github. Submit a pull request to the main repository so that I know your code is ready to be reviewed.  
+When you have finished your solution and are ready to submit, make your final commit and push everything up to Github. Submit a pull request to the main repository. Mark jd12 as a reviewer so that I know your code is ready to be reviewed.  
